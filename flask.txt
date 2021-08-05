@@ -1,0 +1,84 @@
+main.py
+-------
+
+# Press the green button in the gutter to run the script.
+if __name__ == '__main__':
+    print_hi('PyCharm')
+
+# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+# This is a sample Python script.
+
+# Press Shift+F10 to execute it or replace it with your code.
+# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+
+
+def print_hi(name):
+    # Use a breakpoint in the code line below to debug your script.
+    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+
+--------------------------------
+likkiflask.py
+----------
+rom flask import Flask, request, render_template
+loki=Flask(__name__)
+@loki.route('/')
+def hello():
+    return render_template("login.html")
+database={'chandra': 'pubg', 'lname': 'viswa','email': 'viswa@gmail.com', 'dob': '15/07/2001', 'dhanush':'dp28','lname': 'relangi', 'email': 'relangi@gmail.com','dob': '09/09/2001', 'koushik':'ranker', 'lname': 'veramalla', 'email': 'koushik@gmail.com', 'dob': '12/12/2001' }
+@loki.route('/form_login',methods=['POST','GET'])
+def login():
+    name1=request.form['username']
+    lname=request.form['lname']
+    email=request.form['email']
+    dob=request.form['dob']
+    pwd=request.form['password']
+    if name1 not in database:
+        return render_template('login.html', info='Invalid User')
+    else:
+        if database[name1]!=pwd:
+            return render_template('login.html', info='Invalid Password')
+        else:
+            return render_template('home.html', name=name1, lname=lname, email=email,dob=dob)
+
+if __name__=='__main__':
+    loki.run(debug=True)
+--------------------------------------
+home.html
+--------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Home </title>
+</head>
+<body bgcolor="teal">
+<br>
+<h1 align="center">Welcome {{ name }} {{ lname }} !</h1>
+</body>
+</html>
+-------------------------------
+login.html
+-----
+head>
+    <meta charset="UTF-8">
+    <title>Login page</title>
+</head>
+<body bgcolor="black">
+<form action="form_login" method="post">
+    <h2><mark>enter your details here</h2><mark>username<br>
+    <input type="text" name="username"><br>
+    <mark>password:</mark><br>
+    <input type="text" name="password"><br>
+    <mark>lname:</mark><br>
+    <input type="text" name="lname"><br>
+    <mark>email:<br>
+    <input type="text" name="email"><br>
+        <mark>dob:</mark><br>
+        <input type="text" name="dob"<br>
+    <input type="submit" value="Login">
+</form>
+<h1>{{ info }}</h1>
+</body>
+</html>
+

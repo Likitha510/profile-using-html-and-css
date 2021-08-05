@@ -1,0 +1,54 @@
+<html>
+<head>
+<title>resume</title>
+</head>
+<center><h1 style="color:blue;">RESUME</h1></center>
+<body style="background-color:Pink;">
+<img src="C:\Users\likitha.srigh\Desktop\teddy.png",width="65" height="59"><br>
+<strong>FIRSTNAME</strong><br>
+
+<input type="text" name="fname" value="Likitha" /><br></br>
+<strong>LAST NAME</strong><br>
+<input type="text" name="lname" value="Srighakollapu"/><br></br>
+<b><email></b>
+<strong>Email</strong><br>
+<input type="email" value="likki@gmail.com"><br>
+
+<strong>Date of Birth</strong><br>
+<input type="date" name="dob" Value=01-05-2003 ><br></br>
+
+<strong>Mobile Number</strong><br>
+<input type="tel" name="phoneno" value=9701398019 ><br></br>
+<b>Marital status</b><br>
+<input type="radio" name="Marutal status" value="UnMarried"  /> UnMarried
+<input type="radio" name="Marutal status" value="Married"/>Married
+<br></br>
+
+<strong>Gender</strong><br>
+<input type="radio" name="gender" value="Male"  />Male
+<input type="radio" name="gender" value="Female"  Checked/>Female
+<br></br>
+<strong>Address</Strong><br>
+<input type="text" name="Address" value="Kothapeta,East Godavari Dist"/><br>
+<h3><u>Education</u></h3>
+<span style='font-size:65px;'>&#9997;</span>
+<ul>
+  <li>SSC:90%</li>
+  <li>Inter:85%</li>
+ </ul>
+
+<dt><h3><u>Hobbies</u></h3></dt>
+  <dd>- Reading books,listening music</dd>
+ <h3>Declaration</h3>
+            <p>
+            I hereby declare that the details furnished above are true and correct to the best of my knowledge and belief.</p>
+<meta charset="UTF-8">
+<p>&#128512;</p>
+
+
+
+
+
+
+</body>
+</html>
